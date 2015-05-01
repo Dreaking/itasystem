@@ -1,0 +1,34 @@
+<div class="myinfo clearfix" ng-controller="myInfoCtrl">
+     <h4>个人信息</h4>
+     <form ng-controller="userinfoform" name="userinfoform">
+          <div id="myinfo_pic"><img ng-src="{{userpic}}"/><a>上传头像</a></div>
+          <span class="Dividing_line"></span>
+          <div class="myinfo_box"><label for="myinfo_name">昵称:</label><input id="myinfo_name" type="text" ng-model="username"><a class="changepwd_btn" ui-sref="index.myhome.change">修改密码</a></div>
+          <div class="myinfo_box"><label for="myinfo_sex">性别:</label><a id="sex_man" class="sexdefult" ng-click="sexselect=true" ng-class="{'sexselect':sexselect}">男</a><a id="sex_woman" class="sexdefult" ng-click="sexselect=false" ng-class="{'sexselect':!sexselect}">女</a></div>
+          <div class="myinfo_box"><label for="myinfo_device">我的设备:</label><em ng-bind="usernumber"></em></div>
+          <div class="myinfo_box"><label for="myinfo_signature">个性签名:</label><textarea id="myinfo_signature" ng-maxlength="100"  type="text" ng-bind="usersignature"></textarea></div>
+          <div class="myinfo_edit_box"><i id="myinfo_edit_btn">保存</i></div>
+     </form>
+     <h4>我的守护神</h4>
+     <div class="myprotector" ng-controller="protectorCtrl">
+     <a class="myprotect_edit"  ng-click="editProtector()">{{protector_edit_status}}<i ng-show="protector_edit_status" class="iconfont protector_editicon">&#xe60d;</i></a>
+     <div class="myprotect_box fade-in-animation" ng-repeat="protect in protector">
+     <label class="protector_name_label">备注:</label>
+     <input class="protectorname" type="text" ng-model="protect.name" ng-disabled="protectoredit"/>
+     <label class="protector_num_label">手机号码:</label>
+     <input class="protectorphone" type="text" ng-model="protect.phone" ng-disabled="protectoredit"/>
+     <em ng-model="protect.id" class="iconfont protector_decrese bounce-animation" ng-show="!protectoredit" ng-click="delProtector($index)">&#xe610;</em>
+     </div>
+     <form name="protector_edit_addform" novalidate>
+          <div class="myprotect_box bounce-animation">
+          <label class="protector_name_label">备注:</label>
+           <input class="protectorname" name="protectorname" type="text" ng-model="newprotector.name" ng-class="{true:'input-error',false:''}[protector_edit_addform.protectorname.$invalid&&protector_edited]" auto-focus-when="nameFocus" required/>
+          <label class="protector_num_label">手机号码:</label>
+            <input class="protectorphone" name="protectorphone" type="text" ng-pattern="/^[0-9]+$/" ng-model="newprotector.phone" ng-class="{true:'input-error',false:''}[protector_edit_addform.protectorphone.$invalid&&protector_edited]" ng-maxlength="11" ng-minlength="11"  auto-focus-when="phoneFocus" required/>
+            <em class="iconfont protector_add" ng-click="addProtector()">&#xe60b;</em></div>
+          </div>
+     </form>
+</div>
+<div id="footer">
+    <p class="footer">广东工业大学-iTA团队版权所有 Design by SimpleFatty</p>
+</div>

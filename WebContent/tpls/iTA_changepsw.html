@@ -1,0 +1,16 @@
+<div class="changepwd clearfix" ng-controller="changePassword">
+     <div class="changepwd_header"><h4>修改密码</h4></div>
+     <form name="changepassword_form" ng-submit="changePassword()" novalidate>
+     <div class="changepwd_box">
+         <label for="old_pwd">原密码:</label><input type="password" name="old_pwd" ng-model="old_pwd" required>
+     </div>
+     <div class="changepwd_box"><label for="new_pwd">新密码:</label><input type="password" name="userPassword" id="userPassword" ng-model="user.userPassword" required/></div>
+     <div class="changepwd_box"><label for="confirm_pwd">确认密码:</label>
+     <input type="password" ng-class="{'agree' : !changepassword_form.confirmPassword.$pristine && changepassword_form.confirmPassword.$valid,'error':!changepassword_form.confirmPassword.$pristine && changepassword_form.confirmPassword.$invalid}" id="confirmPassword" name="confirmPassword" ng-model="user.confirmPassword" pw-check="userPassword" required>
+     </div>
+     <div class="changepwd_btn"><input type="submit" ng-class="{disabled:!changepassword_form.$valid,abled:changepassword_form.$valid}" ng-disabled="!changepassword_form.$valid" value="修改"/></div>
+     </form>
+</div>
+<div id="footer">
+    <p class="footer">广东工业大学-iTA团队版权所有 Design by SimpleFatty</p>
+</div>

@@ -1,0 +1,100 @@
+<div class="usermyapp clearfix" ng-controller="myAppCtrl">
+     <div class="user_rl"  ng-init="addplanshow=false">
+         <div class="user_rlplan"><a>消息提醒</a></div>
+         <div class="rl_rcbox">
+             <div class="rl_rcbox_mask">
+                 <ul class="rl_rclist clearfix">
+                     <li class="rc_plan" ng-click="addplanshow=!addplanshow">
+                         <div class="plan_drective"></div>
+                         <div class="plan_detail">
+                         <h3>出门</h3>
+                         <span>9:00-12:00<i class="iconfont change">&#xe60d</i></span>
+                         <a>要出去吃饭啦~</a>
+                         </div>
+                     </li>
+                     <li class="rc_edit" ng-click="addplanshow=!addplanshow">
+                         <i class="iconfont">&#xe60b</i>
+                         <span>新建提醒</span>
+                     </li>
+                 </ul>
+                 <div class="editmask" ng-show="addplanshow"></div>
+                 <div class="editbox show-animation" ng-show="addplanshow">
+                    <h3>新建提醒<i class="iconfont closeedit" ng-click="addplanshow=!addplanshow">&#xe60e;</i></h3>
+                    <p>日期:</p>
+                     <input id="plandate" type="datetime-local"/>
+                    <p>标题:</p>
+                     <input type="text" placeholder="开会">
+                    <p>详情:</p>
+                     <input type="text" style="width:317px; margin-right:12px;" placeholder="今天去干点啥呢~">
+                     <a id="save_edit" onclick="console.log(document.getElementById('plandate').value);">保存</a>
+                 </div>
+             </div>
+             <div class="pagebtn">
+                 <div class="rl_rcbg"></div>
+                 <div class="rl_rcprev"></div>
+                 <div class="rl_rcnext"></div>
+             </div>
+             <div class="rl_rcday">
+                 <ul>
+                     <li><a>今天</a></li>
+                     <li><a>明天</a></li>
+                     <li><a>后天</a></li>
+                     <li><a>2月7日</a></li>
+                     <li><a>2月8日</a></li>
+                 </ul>
+                 <a class="moreday">我的日历</a>
+                 <span class="to-day">&nbsp;&gt;</span>
+                 <em class="iconfont new_plan" ng-click="addplanshow=!addplanshow">&#xe60b</em>
+             </div>
+         </div>
+     </div>
+     <div class="user_weather clearfix">
+        <div class="weather_box"  ng-init="weatherboxshow=false">
+            <div class="user_rlplan"><a>天气监控</a></div>
+        </div>
+        <div class="weather_icon"></div>
+        <div id="weather_info"></div>
+         <div class="weather_setting">
+             <i class="iconfont" ng-click="weatherboxshow=!weatherboxshow">&#xe60c</i>
+         </div>
+         <div class="setting_box show-animation" ng-show="weatherboxshow">
+             <h3>广州<span>更改</span><i class="iconfont closeedit" ng-click="weatherboxshow=!weatherboxshow">&#xe60e;</i></h3>
+             <label for="set_taggle">是否开启恶劣天气提醒</label>
+             <input type="checkbox" id="set_taggle" value=""/>
+             <label>提醒时间</label>
+             <select name="start-time" id="start-time">
+                 <option value="0">0:00</option>
+                 <option value="1">1:00</option>
+                 <option value="2">2:00</option>
+                 <option value="3">3:00</option>
+                 <option value="4">4:00</option>
+                 <option value="5">5:00</option>
+                 <option value="6">6:00</option>
+                 <option value="7">7:00</option>
+                 <option value="8">8:00</option>
+                 <option value="9">9:00</option>
+                 <option value="10">10:00</option>
+                 <option value="11">11:00</option>
+                 <option value="12">12:00</option>
+                 <option value="13">13:00</option>
+                 <option value="14">14:00</option>
+                 <option value="15">15:00</option>
+                 <option value="16">16:00</option>
+                 <option value="17">17:00</option>
+                 <option value="18">18:00</option>
+                 <option value="19">19:00</option>
+                 <option value="20">20:00</option>
+                 <option value="21">21:00</option>
+                 <option value="22">22:00</option>
+                 <option value="23">23:00</option>
+             </select>
+             <label>/每天</label>
+             <span class="setting-ui"></span>
+             <span class="setting-ui setting-ui-mask"></span>
+         </div>
+     </div>
+    </div>
+</div>
+<div id="footer">
+    <p class="footer">广东工业大学-iTA团队版权所有 Design by SimpleFatty</p>
+</div>

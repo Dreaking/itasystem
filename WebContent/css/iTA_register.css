@@ -1,0 +1,193 @@
+/*Register*/
+.registerform_area {
+  width: 450px;
+  height: 400px;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  /*1*/
+  /*2*/
+  /*3*/
+}
+.registerform_area .register_error_tip {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  top: 220px;
+}
+.registerform_area .register_error_tip a {
+  padding: 0 3px;
+  color: #FA6262;
+  cursor: pointer;
+}
+.registerform_area .register_error_tip a:hover {
+  text-decoration: underline;
+}
+.registerform_area .register_tip {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  top: 220px;
+}
+.registerform_area .register_tip a {
+  padding: 0 3px;
+  color: #FA6262;
+  cursor: pointer;
+}
+.registerform_area .register_tip a:hover {
+  text-decoration: underline;
+}
+.registerform_area #register_error_tip {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  top: 280px;
+  color: green;
+}
+.registerform_area #register_error_tip a {
+  padding: 0 3px;
+  color: #FA6262;
+  cursor: pointer;
+}
+.registerform_area #register_error_tip a:hover {
+  text-decoration: underline;
+}
+.registerform_area .pass_thisstatus {
+  background: #333;
+}
+.registerform_area .pass_thisstatus span {
+  background: #333;
+}
+.registerform_area .register_status_line_one,
+.registerform_area .register_status_line_two,
+.registerform_area .register_status_line_three {
+  float: left;
+  position: relative;
+  width: 150px;
+  height: 4px;
+  -webkit-transition: all .6s linear;
+       -o-transition: all .6s linear;
+          transition: all .6s linear;
+}
+.registerform_area .register_btn {
+  text-align: center;
+  width: 312px;
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  margin-top: 30px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+.registerform_area .register_btn span:hover {
+  text-decoration: underline;
+}
+.registerform_area .status_one_page {
+  width: 100%;
+  height: 200px;
+  left: 0;
+  position: absolute;
+  margin-top: 60px;
+  -webkit-transition: left 1s ease;
+       -o-transition: left 1s ease;
+          transition: left 1s ease;
+}
+.registerform_area .status_two_page {
+  width: 100%;
+  height: 200px;
+  left: 0;
+  position: absolute;
+  margin-top: 60px;
+  -webkit-transition: left 1s ease;
+       -o-transition: left 1s ease;
+          transition: left 1s ease;
+}
+.registerform_area .status_three_page {
+  width: 100%;
+  height: 200px;
+  left: 0;
+  position: absolute;
+  margin-top: 60px;
+  -webkit-transition: left 1s ease;
+       -o-transition: left 1s ease;
+          transition: left 1s ease;
+}
+.registerform_area .register_inputarea {
+  position: relative;
+}
+.registerform_area .register_inputarea .status_next {
+  display: block;
+  position: absolute;
+  color: #4C4C4C;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 33px;
+  top: 0;
+  right: 74px;
+}
+.registerform_area .register_inputarea .ng-valid {
+  border-color: green;
+}
+.registerform_area .register_inputarea .ng-invalid {
+  border-color: red;
+}
+.registerform_area .register_inputarea .register_enter_item {
+  background: none;
+  width: 260px;
+  padding: 3px;
+  padding-right: 40px;
+  display: block;
+  margin: 68px auto;
+  line-height: 34px;
+  border: none;
+  border-bottom: 1px solid #A6A0A0;
+  color: #333;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+.register_status_line {
+  position: absolute;
+  width: 450px;
+  height: 4px;
+  background: #ddd;
+  top: 20px;
+  left: 0;
+}
+.register_status_line span {
+  text-align: center;
+  line-height: 30px;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -13px;
+  left: 60px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  color: #fff;
+  background: #ddd;
+}
+.registerfooter {
+  font-size: 12px;
+  color: #999;
+  padding-bottom: 80px;
+  position: absolute;
+  top: 380px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}

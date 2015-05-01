@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.ita.model">
+	<class name="User" table="user_table">
+		
+		<id name="id" type="integer" column="user_id">
+			<!-- 指定使用native主键生成策略 -->
+			<generator class="native"/>
+		</id>
+		<property name="name" column="user_name" type="string"
+			not-null="true" length="50"/>
+		<property name="pass" column="user_pass" type="string"
+			not-null="true" length="50"/>
+		<property name="phone" column="user_phone" type="string"
+			not-null="true" length="50"/>
+		<property name="address" column="user_address" type="string"
+			not-null="true" length="200"/>
+		<property name="email" column="user_email" type="string"
+			not-null="true" length="100" unique="true"/>
+		<property name="image" column="user_image" type="string"
+			length="100" unique="true"/>
+			
+		<!-- 映射和location之间的联系关系 -->
+		<set name="locations" inverse="true">
+			<key column="user_id" />
+			<one-to-many class="Location"/>
+		</set>
+		<!-- 映射和memo之间的联系关系 -->
+		<set name="memos" inverse="true">
+			<key column="user_id" />
+			<one-to-many class="Memo"/>
+		</set>
+		<!-- 映射和protector之间的联系关系 -->
+		<set name="protectors" inverse="true">
+			<key column="user_id"/>
+			<one-to-many class="Protector"/>
+		</set>
+	</class>
+</hibernate-mapping>

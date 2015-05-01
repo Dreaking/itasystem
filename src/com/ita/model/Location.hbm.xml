@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.ita.model">
+	<class name="Location" table="location_table">
+		<!-- 映射标识属性 -->
+		<id name="id" type="integer" column="local_id">
+			<!-- 指定使用native主键生成策略 -->
+			<generator class="native"/>
+		</id>
+		<!-- 映射普通属性 -->
+		<property name="longitude" column="local_longitude" type="string"
+			not-null="true" length="50"/>
+		<property name="latitude" column="local_latitude" type="string"
+			not-null="true" length="50"/>
+		<!-- 映射和User的关联关系 -->
+		<many-to-one name="user" column="user_id"
+			class="User" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

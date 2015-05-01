@@ -1,0 +1,21 @@
+<div class="layout">
+      <div class="contain">
+         <div class="iTA_logo"></div>
+         <div class="loginform_area">
+             <form id="loginform">
+             <div class="enter_area">
+                 <input id="iTA_username" ng-model="name" type="text" class="enter_item" placeholder="账号/Username" required="true"/>
+                 <i class="iconfont username_icon">&#xe603;</i>
+             </div>
+             <div class="enter_area">
+                 <input id="iTA_password" ng-model="pass" type="password" class="enter_item" placeholder="密码/Password" required="true"/>
+                 <i class="iconfont password_icon">&#xe604</i>
+             </div>
+                 <span class="errortip">账号或密码错误</span>
+                 <a class="submit_btn" id="submit_btn" ng-click="doLogin()">登录</a>
+                 <p>没有账号?<a ui-sref="register">现在注册</a></p>
+             </form>
+             <p class="loginfooter">广东工业大学-iTA团队版权所有 Design by SimpleFatty</p>
+         </div>
+      </div>
+</div>

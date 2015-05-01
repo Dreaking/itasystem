@@ -1,0 +1,35 @@
+<div class="layout">
+      <div class="contain" ng-init="status=0">
+         <div class="iTA_logo"></div>
+         <div class="registerform_area">
+         <div class="register_status_line">
+         <div class="pass_thisstatus register_status_line_one"><span>1</span></div>
+         <div class="register_status_line_two" ng-class="{pass_thisstatus:status>0 }"><span>2</span></div>
+         <div class="register_status_line_three" ng-class="{pass_thisstatus:status>2}"><span>3</span></div>
+         </div>
+         <div class="status_one_page slide-in-animation" ng-show="status==0">
+            <div class="register_inputarea">
+            <input id="iTA_register_username" ng-model="user.email" type="mail" class="register_enter_item"  required="true" placeholder="电子邮箱"/>
+            </div>
+         </div>
+         <div class="status_two_page slide-in-animation" ng-show="status==1">
+            <div class="register_inputarea">
+            <input id="iTA_register_password" ng-model="user.password" type="text" class="register_enter_item"  required="true" placeholder="密码"/>
+            </div>
+         </div>
+         <div class="status_two_page slide-in-animation" ng-show="status==2">
+            <div class="register_inputarea">
+            <input id="iTA_register_ensurepassword" ng-model="user.ensurepassword" type="text" class="register_enter_item"  required="true" placeholder="请再输一次密码"/>
+            </div>
+         </div>
+         <div class="status_three_page slide-in-animation" ng-show="status>2">
+            <div class="register_inputarea">
+            <input id="iTA_register_registercode" ng-model="user.registercode" type="text" class="register_enter_item"  required="true" placeholder="注册码"/>
+            </div>
+         </div>
+         <p class="register_tip">按回车键或<a id="registernext" ng-click="nextstep()">点击这里</a>进入下一步</p>
+         <em id="register_error_tip"></em>
+             <p class="registerfooter">广东工业大学-iTA团队版权所有 Design by SimpleFatty</p>
+         </div>
+      </div>
+</div>

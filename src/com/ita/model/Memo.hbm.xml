@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.ita.model">
+	<class name="Memo" table="memo_table">
+		<!-- 映射标识属性 -->
+		<id name="id" type="integer" column="memo_id">
+			<!-- id生成策略 -->
+			<generator class="native"/>
+		</id>	
+		<property name="appid" column="memo_appid" type="string"
+			not-null="false" length="50"/>	
+		<property name="title" column="memo_title" type="string" 
+			not-null="true" length="50"/>
+		<property name="time" column="memo_time" type="string"
+			not-null="true" length="50"/>
+		<property name="place" column="memo_place" type="string"
+			not-null="true" length="100"/>
+		<property name="thing" column="memo_thing" type="string"
+			not-null="true" length="200"/>
+		<property name="syn" column="memo_syn" type="int"
+			not-null="true" length="5"/>
+		<many-to-one name="user" column="user_id"
+			class="User" not-null="true" lazy="false"/>
+			
+	</class>
+</hibernate-mapping>

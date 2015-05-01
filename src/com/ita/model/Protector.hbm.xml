@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.ita.model">
+	<class name="Protector" table="protector_table">
+		<!-- 映射标识属性 -->
+		<id name="id" type="integer" column="protector_id">
+			<!-- id生成策略 -->
+			<generator class="native"/>
+		</id>	
+		<property name="name" column="protector_name" type="string"
+			not-null="true" length="20"/>
+		<property name="phone" column="protector_phone" type="string"
+			not-null="true" length="20"/>
+		<many-to-one name="user" column="user_id"
+			class="User" not-null="true" lazy="false"/>
+			
+	</class>
+</hibernate-mapping>

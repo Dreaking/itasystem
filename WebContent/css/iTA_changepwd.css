@@ -1,0 +1,80 @@
+.changepwd{
+	width: 748px;
+    float: left;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    position: relative;
+    background:rgba(255,255,255,1);
+    box-shadow: 0 0 5px #DFDFDF;
+    border-radius: 5px;
+}
+.changepwd_header{
+	width: 730px;
+	height: 40px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ddd;
+}
+.changepwd_header h4{
+	text-align: left;
+	padding-left: 10px;
+	font-size: 24px;
+	line-height: 40px;
+}
+.changepwd_box{
+	width: 567px;
+	height: 20px;
+	margin: 40px auto;
+}
+.changepwd .changepwd_btn{
+	width: 567px;
+	height: 20px;
+	margin: 40px auto;
+}
+.changepwd_btn input{
+	display: block;
+	width: 80px;
+	height: 30px;
+	border: none;
+	outline: none;
+	cursor: auto;
+	margin: 0 auto;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 30px;
+	transition: background .3s ease;
+}
+.changepwd_btn .disabled{
+   background: #ddd;
+   cursor: auto;
+}
+.changepwd_btn .abled{
+   background: #32D559;
+   cursor: pointer;
+}
+.changepwd_box label{
+	width: 201px;
+	line-height: 20px;
+	float: left;
+	text-align: right;
+	font-size: 16px;
+	padding-right: 20px;
+}
+.changepwd_box input{
+	width: 140px;
+	height: 16px;
+	padding: 2px;
+	font-size: 14px;
+	line-height: 16px;
+	border-radius: 3px;
+    float: left;
+    border: 1px solid #DDD;
+    box-shadow: 0 0 1px #DDD;
+}
+.changepwd_box .error{
+  border-color:red;
+}
+.changepwd_box .agree{
+  border-color:#DDD;
+}

@@ -1,0 +1,33 @@
+ <div class="warp">
+ <div class="userinfo clearfix" ng-controller="myInfoCtrl">
+     <div class="userpic">
+         <img ng-src="{{userpic}}"/>
+     </div>
+     <p><i class="iconfont ye">&#xe608</i>{{username}}</p>
+     <div class="someinfo">
+     <span class="trigon-ui"></span>
+     <span class="trigon-ui trigon-ui-mask"></span>
+     <p>设备编号：<a ui-sref="index.myhome.myinfo" ng-bind="usernumber"></a></p>
+     <p ng-bind="usersignature">这里可以是一些内容~这里可以是一些内容~这里可以是一些内容~</p>
+     </div>
+     <div class="userbtn">
+         <div id="myInfo" class="hoverblock">
+             <div class="out">
+              <i class="iconfont infoicon">&#xe600;</i>
+             </div>
+             <div class="in">
+              <a ui-sref="index.myhome.myinfo">个人信息</a>
+             </div>
+         </div>
+         <div id="myApp" class="hoverblock">
+             <div class="out">
+              <i class="iconfont infoicon">&#xe606;</i>
+             </div>
+             <div class="in">
+              <a ui-sref="index.myhome.myapp">我的应用</a>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div ui-view class="fade-in-animation"></div>
+ </div>
